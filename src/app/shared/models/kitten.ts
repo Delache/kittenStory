@@ -1,7 +1,7 @@
 export class Kitten {
   public name: string;
   public breed: string;
-  public birth: Date;
+  public birth: number;
   public picture: string;
 
   constructor(input: Kitten) {
@@ -9,3 +9,4 @@ export class Kitten {
   }
 
 }
+
