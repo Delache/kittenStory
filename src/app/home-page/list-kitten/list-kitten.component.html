@@ -1,7 +1,8 @@
-<div>
+<div class='head'>
   <button type="button" class="btn btn-light" [routerLink]="['create']">Add a kitten</button>
 </div>
 
-<div *ngFor="let kitten of kittensList">
-  <app-kitten [kitten] = 'kitten'></app-kitten>
+<div *ngFor="let kitten of kittensList" class='container'>
+  <app-kitten [kitten] = 'kitten'
+              (kittenClicked)='adoptedKitten(kitten)'></app-kitten>
 </div>

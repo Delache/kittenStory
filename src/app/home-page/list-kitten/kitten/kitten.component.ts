@@ -1,5 +1,5 @@
 import { Kitten } from './../../../shared/models/kitten';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 
 @Component({
   selector: 'app-kitten',
@@ -8,8 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class KittenComponent implements OnInit {
   @Input() kitten: Kitten;
+  @Output() kittenClicked = new EventEmitter<Kitten>();
 
   ngOnInit() {
+  }
+  clicked() {
+    this.kittenClicked.emit(this.kitten);
   }
 
 }
