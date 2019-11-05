@@ -1,37 +1,3 @@
 .banniere img{
   width: 100%;
 }
-.premiumPage{
-  margin-top:-5px;
-  display: flex;
-  flex-direction: row;
-  height: 500px;
-}
-nav{
-  margin-top:0;
-  background-color: #EDC7B7;
-  padding: 25px;
-}
-ul{
-  display:flex;
-  justify-content: space-around;
-
-}
-li{
-  list-style: none;
-  color: #AC3B61;
-  display: block;
-  padding: 0 25px;
-}
-.user{
-  background-color: #BAB2B5;
-  padding: 25px;
-  flex:1;
-}
-.mainPage{
-  background-color: #EEE2DC;
-  flex:2;
-}
-.contenu{
-  padding: 25px;
-}

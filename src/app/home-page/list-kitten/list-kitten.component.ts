@@ -1,5 +1,5 @@
-import { Kitten } from './../shared/models/kitten';
-import { MockKittens } from './../shared/mock-kittens';
+import { Kitten } from '../../shared/models/kitten';
+import { MockKittens } from '../../shared/mock-kittens';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
