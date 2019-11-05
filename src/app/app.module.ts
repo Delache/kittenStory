@@ -7,6 +7,7 @@ import { CreateKittenComponent } from './create-kitten/create-kitten.component';
 import { ListKittenComponent } from './home-page/list-kitten/list-kitten.component';
 import { UserKittenComponent } from './user-kitten/user-kitten.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { KittenComponent } from './home-page/list-kitten/kitten/kitten.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     CreateKittenComponent,
     ListKittenComponent,
     UserKittenComponent,
-    HomePageComponent
+    HomePageComponent,
+    KittenComponent
   ],
   imports: [
     BrowserModule,

@@ -1,20 +1,7 @@
 <div>
-  <button [routerLink]="['create']">Add a kitten</button>
+  <button type="button" class="btn btn-light" [routerLink]="['create']">Add a kitten</button>
 </div>
 
 <div *ngFor="let kitten of kittensList">
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img [src]='kitten.picture' class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{kitten.name}} </h5>
-          <p class="card-text">{{kitten.breed}}.</p>
-          <p class="card-text"><small class="text-muted">{{kitten.birth}}</small></p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-kitten [kitten] = 'kitten'></app-kitten>
 </div>
