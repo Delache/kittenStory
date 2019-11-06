@@ -40,6 +40,8 @@
     [(ngModel)]="newKitten.picture" name="picture" #picture="ngModel">
   </div>
 
-    <button type="submit" [disabled]="!kittenForm.valid" class="btn btn-ligth">Submit</button>
+    <button type="submit"
+            [disabled]="!kittenForm.valid"
+            class="btn btn-light">Submit</button>
 
 </form>

@@ -1,4 +1,3 @@
-import { Kitten } from './../shared/models/kitten';
 import { Component, OnInit} from '@angular/core';
 
 
