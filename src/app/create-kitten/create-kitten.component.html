@@ -1,19 +1,45 @@
-<form>
+<form (ngSubmit)="onSubmit()" #kittenForm="ngForm">
+
+
+        <!-- Kitten name -->
   <div class="form-group">
     <label for="name">Name: </label>
-    <input type="text" class="form-control" id="name" placeholder="Enter kitten's name">
+    <input type="text" class="form-control" id="name" placeholder="Enter kitten's name"
+    required pattern="^[a-zA-Z0-9àéèç]{1,25}$" [(ngModel)]="newKitten.name" name="name"
+    #name="ngModel">
+    <div [hidden]="name.valid || name.pristine" class="card-panel red accent-1">
+      Name is required (1-25).
+    </div>
   </div>
+
+       <!-- Kitten breed -->
   <div class="form-group">
     <label for="breed">Breed: </label>
-    <input type="text" class="form-control" id="breed" placeholder="Enter kitten's breed">
+    <input type="text" class="form-control" id="breed" placeholder="Enter kitten's breed"
+    required pattern="^[a-zA-Z0-9àéèç]{1,25}$" [(ngModel)]="newKitten.breed" name="breed" #breed="ngModel">
+    <div [hidden]="breed.valid || breed.pristine" class="card-panel red accent-1">
+      Breed is required (1-25).
+    </div>
   </div>
+
+      <!-- Kitten birth -->
   <div class="form-group">
     <label for="birth">Birth date: </label>
-    <input type="date" class="form-control" id="birth" placeholder="Enter kitten's birth date">
+    <input type="number" class="form-control" id="birth" placeholder="Enter kitten's birth date"
+    required  [(ngModel)]="newKitten.birth" name="birth"
+    #birth="ngModel">
+    <div [hidden]="birth.valid || birth.pristine" class="card-panel red accent-1">
+      Birth date is required.
+    </div>
   </div>
+
+
   <div class="form-group">
     <label for="photo">Photo: </label>
-    <input type="text" class="form-control" id="photo" placeholder="Have you got a photo?">
+    <input type="text" class="form-control" id="photo" placeholder="Have you got a photo?"
+    [(ngModel)]="newKitten.picture" name="picture" #picture="ngModel">
   </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button type="submit" [disabled]="!kittenForm.valid" class="btn btn-ligth">Submit</button>
+
 </form>

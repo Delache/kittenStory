@@ -1,7 +1,7 @@
 import { MockKittens } from './../../shared/mock-kittens';
 import { MockAdoptKittens } from './../../shared/mock-adoptKittens';
 import { Kitten } from '../../shared/models/kitten';
-import { MockKittens } from '../../shared/mock-kittens';
+
 
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 

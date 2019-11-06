@@ -1,3 +1,5 @@
+import { KittenService } from './../shared/kitten.service';
+import { Kitten } from './../shared/models/kitten';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-kitten.component.scss']
 })
 export class CreateKittenComponent implements OnInit {
+  newKitten: Kitten = new Kitten();
 
-  constructor() { }
+  constructor(private service: KittenService) { }
 
   ngOnInit() {
   }
-
+  onSubmit() {
+    this.service.kittens.push({...this.newKitten});
+    console.log(this.newKitten);
+  }
 }
