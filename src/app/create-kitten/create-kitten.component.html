@@ -1,6 +1,4 @@
 <form (ngSubmit)="onSubmit()" #kittenForm="ngForm">
-
-
         <!-- Kitten name -->
   <div class="form-group">
     <label for="name">Name: </label>
@@ -11,7 +9,6 @@
       Name is required (1-25).
     </div>
   </div>
-
        <!-- Kitten breed -->
   <div class="form-group">
     <label for="breed">Breed: </label>
@@ -25,7 +22,7 @@
       <!-- Kitten birth -->
   <div class="form-group">
     <label for="birth">Birth date: </label>
-    <input type="number" class="form-control" id="birth" placeholder="Enter kitten's birth date"
+    <input type="date" class="form-control" id="birth" placeholder="Enter kitten's birth date"
     required  [(ngModel)]="newKitten.birth" name="birth"
     #birth="ngModel">
     <div [hidden]="birth.valid || birth.pristine" class="card-panel red accent-1">
@@ -39,9 +36,7 @@
     <input type="text" class="form-control" id="photo" placeholder="Have you got a photo?"
     [(ngModel)]="newKitten.picture" name="picture" #picture="ngModel">
   </div>
-
     <button type="submit"
             [disabled]="!kittenForm.valid"
-            class="btn btn-light">Submit</button>
-
+            class="btn btn-light">Add kitten</button>
 </form>

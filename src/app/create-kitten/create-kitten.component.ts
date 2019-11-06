@@ -16,7 +16,7 @@ export class CreateKittenComponent implements OnInit {
   ngOnInit() {
   }
   onSubmit() {
-    this.service.kittens.push({...this.newKitten});
+    this.service.kittens.push(this.newKitten);
     console.log(this.newKitten);
     this.router.navigate(['']);
 

@@ -3,10 +3,6 @@ export class Kitten {
   public breed: string;
   public birth: number;
   public picture: string;
-
-  constructor(input: Kitten) {
-    Object.assign(this, input);
-  }
-
 }
+
 

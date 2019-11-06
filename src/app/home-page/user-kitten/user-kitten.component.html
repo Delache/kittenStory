@@ -1,19 +1,17 @@
+<div class='split'>
+
 <div class='head'>
-  <h2>Adopted kitten</h2>
+  <p>Adopted kitten</p>
 </div>
 
 <div *ngFor="let kittenAdopted of adoptedKittens"  class='container'>
-  <div class="card mb-3" style="max-width: 540px;">
-    <div class="row no-gutters">
-      <div class="col-md-4">
-        <img [src]='kittenAdopted.picture' class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{kittenAdopted.name}} </h5>
-          <p class="card-text">{{kittenAdopted.breed}}.</p>
-          <p class="card-text"><small class="text-muted">{{kittenAdopted.birth}}</small></p>
-        </div>
+  <div class="card vertical">
+    <div class="card-image">
+       <img [src]='kittenAdopted.picture' class="card-img" alt="...">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5>{{kittenAdopted.name}} </h5>
       </div>
     </div>
   </div>

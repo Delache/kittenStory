@@ -9,6 +9,7 @@ import { ListKittenComponent } from './home-page/list-kitten/list-kitten.compone
 import { UserKittenComponent } from './home-page/user-kitten/user-kitten.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { KittenComponent } from './home-page/list-kitten/kitten/kitten.component';
+import { CardDirective } from './directive/card.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { KittenComponent } from './home-page/list-kitten/kitten/kitten.component
     ListKittenComponent,
     UserKittenComponent,
     HomePageComponent,
-    KittenComponent
+    KittenComponent,
+    CardDirective
   ],
   imports: [
     BrowserModule,

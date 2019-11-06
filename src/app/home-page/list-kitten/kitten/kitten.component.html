@@ -1,15 +1,15 @@
-<div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
+  <div class="card horizontal" appCard>
+    <div class="card-image">
       <img [src]='kitten.picture' class="card-img" alt="...">
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{kitten.name}} </h5>
-        <p class="card-text">{{kitten.breed}}.</p>
-        <p class="card-text"><small class="text-muted">{{kitten.birth}}</small></p>
-        <button (click)='clicked()' type="button" class="btn btn-light">Adopte</button>
+    <div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h4>{{kitten.name}} </h4>
+          <p>{{kitten.breed}}.</p>
+          <p><small>{{kitten.birth| date: 'dd/MM/yyyy'}}</small></p>
+          <button (click)='clicked()' type="button" class="btn btn-light">Adopte</button>
+        </div>
       </div>
-    </div>
+    <div>
   </div>
-</div>
