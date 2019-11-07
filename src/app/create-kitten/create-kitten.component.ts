@@ -19,6 +19,5 @@ export class CreateKittenComponent implements OnInit {
     this.service.kittens.push(this.newKitten);
     console.log(this.newKitten);
     this.router.navigate(['']);
-
   }
 }
